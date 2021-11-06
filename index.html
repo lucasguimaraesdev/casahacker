@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/132153/isolated/preview/2b07e0f940d92cdf0b02e0256417d93b-skating-circle-icon.png" type="image/x-icon">
+	<style>
+		@media only screen and (min-width: 960px) {
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body::-webkit-scrollbar {
+				width: 12px;
+			}
+			body::-webkit-scrollbar-track {
+				background: rgb(255, 255, 255);
+			}
+			
+			body::-webkit-scrollbar-thumb {
+				background-color: rgb(119, 118, 118);    
+			}
+			body{
+				background-color: #0f0f0f;
+			}
+			nav{
+				width: 100%;
+				height: 80px;
+				padding-right: 100px;
+				padding-top: 13px;
+				background-color: rgb(26, 26, 26);
+			}
+			.menu_divisao ul li {
+				display: inline;
+				list-style: none;
+				padding-top: 15px;
+			}
+			a{
+				text-decoration: none;
+				color: rgba(14, 13, 13, 0.904);
+			}
+			ul li{
+				float: right;
+				font-size: 20px;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				padding: 10px;
+				
+			}
+			ul li :hover{
+				color: rgb(187, 184, 184);
+				border-top: 3px solid rgb(187, 184, 184);
+			}
+			h1{
+				margin-top: -40rem;
+				margin-left: 7.5rem;
+				position: absolute;
+				display: block;
+				color: rgb(255, 255, 255);
+				font-size: 30pt;
+				font-family: Arial, Helvetica, sans-serif;
+				letter-spacing: 5px;
+			}
+			.btn_saiba-mais{
+				width: 200px;
+				height: 50px;
+				background-color: #333333;
+				margin-top: -15.5rem;
+				margin-left: 5rem;
+				display: block;
+			}
+			#sobre::after{
+				content: '!';
+				opacity: 1;
+				display: inline-block;
+				animation: 0.7s;
+			}
+			#text_sobre{
+				margin-top: -30.5rem;
+				margin-left: 2rem;
+				margin-right: 50vw;
+				font-size: 15pt;
+				font-family: Arial, Helvetica, sans-serif;
+				color: #ffffff;
+				text-align: left;
+				display: block;
+				position: absolute;
+			}
+			p{
+				position: absolute;
+				margin-top: -65vh;
+				display: block;
+				color: #ffffff;
+				font-size: 10pt;
+				font-family: Arial, Helvetica, sans-serif;
+				letter-spacing: 2px;
+				margin-left: 7mm;
+				margin-right: 5mm;
+			}
+			#login{
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				margin-top: -4rem;
+				margin-left: 94vw;
+				position: absolute;
+			}
+			#icon{
+				width: 30px;
+				height: 30px;
+				filter: blur(0);
+				border-bottom: none;
+				margin-left: -5vh;
+				margin-right: -3mm;
+			}
+			#img-deskstop{
+				width: 100%;
+				height: 110vh;
+				filter: opacity(60%);
+			}
+			#img_section{
+				display: none;
+			}
+			img{
+				width: 700px;
+				height: 110vh;
+				display: block;
+			}
+			#text_duvidas{
+				font-size: 25pt;
+				margin-top: 5rem;
+				margin-left: 31vw;
+				position: absolute;
+				display: block;
+			}
+			#img_type{
+				width: 700px;
+				height: auto;
+				position: absolute;
+				display: block;
+				margin-left: 27.5vw;
+				margin-top: 10rem;
+			}
+			.type{
+				width: 100%;
+				height: 110vh;
+				background-color: rgb(32, 32, 32);
+			}
+			.text_type{
+				margin-top: 20rem;
+				margin-left: 30vw;
+				position: absolute;
+			}
+			#text_type-1{
+				margin-top: 10rem;
+				margin-left: 5mm;
+				margin-right: 73vw;
+				text-align: right;
+				font-size: 15pt;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#text_type-2{
+				margin-top: 10rem;
+				margin-left: 80vw;
+				margin-right: 2mm; 
+				text-align: left;
+				font-size: 15pt;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#text_type-3{
+				margin-top: 25rem;
+				font-size: 15pt;
+				margin-left: 4vw;
+				margin-right: 73vw;
+				text-align: left;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#btn_type{
+				width: 200px;
+				height: 60px;
+				border-radius: 2px;
+				margin-top: 28rem;
+				margin-left: 81vw;
+				position: absolute;
+				background-color: rgb(255, 255, 255);
+			}
+			#link_ic{
+				font-size: 14pt;
+				font-family: Arial, Helvetica, sans-serif;
+				text-decoration: underline;
+				color: black;
+			}
+			#link_ic:hover{
+				opacity: 50%;
+			}
+			button{
+				width: 160px;
+				height: 40px;
+				background-color: #747474;
+				border: none;
+				position: absolute;
+				display: block;
+			}
+			.paragrafo{
+				color: white;
+			}
+			a{
+				text-decoration: none;
+				color: white;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12pt;
+				display: block;
+			}
+			#img_main{
+				width: 100%;
+				height: 90vh;
+				filter: blur(2px);
+			}
+			#img_main-one{
+				width: 200px;
+				height: 200px;
+				margin-left: 82vw;
+				margin-top: -35rem;
+				border-radius: 60%;
+				display: block;
+				position: absolute;
+			}
+			#campo_span-inscrever{
+				margin-top: -32rem;
+				margin-left: 30vw;
+				display: block;
+				position: absolute;
+				color: white;
+				font-size: 25pt;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.text-lc{
+				margin-left: 30vw;
+				margin-right: 30vw;
+				margin-top: -25rem;
+				font-size: 15pt;
+			}
+			#text-ic_text2{
+				margin-top: -18rem;
+				margin-left: 30vw;
+				margin-right: 30vw;
+				font-size: 15pt;
+			}
+			#text-ic_text3{
+				margin-top: -11rem;
+				margin-left: 30vw;
+				margin-right: 30vw;
+				font-size: 15pt;
+			}
+			#text_contact{
+				margin-top: -4.3rem;
+				margin-left: 45.5vw;
+				font-size: 12pt;
+			}
+			#btn_ic{
+				width: 200px;
+				height: 45px;
+				position: absolute;
+				background-color: #333333;
+				margin-top: -5rem;
+				margin-left: 30vw;
+			}
+			footer{
+				display: none;
+			}
+		}
+		@media only screen and (min-width: 200px) and (max-width: 767px){
+			nav{
+				display: none;
+			}
+			#login{
+				display: none;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			::-webkit-scrollbar{
+				display: none;
+			}
+			body{
+				background-color: #333333;
+			}
+			#sobre{
+				margin-top: -80vh;
+				font-size: 35px;
+				margin-left: 12vw;
+			}
+			#img-deskstop{
+				display: none;
+			}
+			#btn_type-bg{
+				display: none;
+			}
+			#imagem-type{
+				display: none;
+			}
+			h1{
+				margin-top: -87vh;
+				margin-left: 22vw;
+				position: absolute;
+				display: block;
+				color: rgb(255, 255, 255);
+				font-size: 40px;
+				font-family: Arial, Helvetica, sans-serif;
+				letter-spacing: 5px;
+			}
+			span{
+				display: block;
+				position: absolute;
+				margin-top: -58vh;
+				margin-left: 11vw;
+				font-size: 15pt;
+				font-family: Arial, Helvetica, sans-serif;
+				color: #ffffff;
+				letter-spacing: 2px;
+				border: none;
+			}
+			p{
+				position: absolute;
+				margin-top: -65vh;
+				display: block;
+				color: #ffffff;
+				font-size: 10pt;
+				font-family: Arial, Helvetica, sans-serif;
+				letter-spacing: 2px;
+				margin-left: 7mm;
+				margin-right: 5mm;
+			}
+			#icon{
+				width: 30px;
+				height: 30px;
+				filter: blur(0);
+				border-bottom: none;
+				margin-left: -5vh;
+				margin-right: -3mm;
+			}
+			#img_section{
+				width: 100%;
+				height: 90vh;
+				filter: blur(4px);
+			}
+			button{
+				width: 200px;
+				height: 35px;
+				background: #e03d97;
+				border: none;
+				position: absolute;
+				display: block;
+				margin-left: 15vw;
+				margin-top: -25vh;
+			}
+			a{
+				color: #ffffff;
+				font-family: Arial, Helvetica, sans-serif;
+				text-decoration: none;
+			}
+			#img_main{
+				width: 100%;
+				height: 90vh;
+				filter: blur(5px);
+			}
+			#img_main-one{
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				position: absolute;
+				filter: blur(0);
+				margin-top: 5vh;
+				margin-left: -74vw;
+				border: 2px solid white;
+				background-position: center;
+			}
+			#btn_ic{
+				margin-top: -20vh;
+				background-color: #ca7310;
+				margin-bottom: 3vh;
+			}
+			#text_ic{
+				margin-top: -50vh;
+				margin-left: 5vh;
+			}
+			#text_contact{
+				margin-top: -35vh;
+				margin-bottom: -10vh;
+				margin-left: 5vh;
+				font-size: 15pt;
+				letter-spacing: 1px;
+			}
+			.type{
+				margin-top: -10mm;
+				background-color: rgb(65, 63, 63);
+				height: 95vh;
+				filter: blur(0);
+			}
+			#img_type{
+				filter: blur(0);
+				width: 100%;
+				height: 160px;
+				margin-top: 20vh;
+				border: none;
+				margin-left: 0;
+			}
+			.text_type{
+				margin-top: 5vh;
+				position: absolute;
+				margin-left: 5mm;
+				margin-right: 2mm;
+				letter-spacing: 3px;
+			}
+			#text_type-3{
+				margin-top: 23vh;
+			}
+			#text_type-2{
+				display: none;
+			}
+			#btn_type{
+				background: #1f8f32;
+				margin-top: 35vh;
+			}
+			#text_duvidas{
+				font-size: 30px;
+				margin-top: -40vh;
+				margin-left: 5vh;
+				letter-spacing: 1px;
+			}
+			#icon_duvidas{
+				width: 30px;
+				height: 30px;
+			}
+			#pgrm{
+				font-size: 30px;
+				letter-spacing: 2px;
+				display: block;
+				position: absolute;
+				margin-left: 17vw;
+			}
+			#icon_pgrm{
+				width: 30px;
+				height: 30px;
+				filter: blur(0);
+				border-bottom: none;
+				margin-left: -5vh;
+				margin-right: -2mm;
+			}
+			#eventos{
+				margin-top: -81vh;
+				margin-left: 26vw;
+				font-size: 13pt;
+				position: absolute;
+				display: block;
+			
+			}
+			#img_midia{
+				width: 100%;
+				height: auto;
+				margin-top: 20vh;
+				margin-bottom: -20vh;
+			}
+			#novo-event{
+				background-color: rgba(23, 177, 164, 0.979);
+			}
+			footer{
+				width: 100%;
+				height: 50vh;
+				background: rgb(37, 37, 37);
+				display: none;
+			}
+		}
+
+	</style>
+	<title>Dubuy Skates</title>
+</head>
+<body>
+	<nav>
+		<div class="menu_divisao">
+			<ul>
+				<li  id="destaque-li"><a href="http://127.0.0.1:5500/Client_Dubuy/pg2/contact.html" id="destaque-link" >SEJA PATROCINADOR</a></li>
+				<li><a href="#">DUBUYBLOG</a></li>
+				<li><a href="#">LOJA</a></li>
+				<li><a href="http://127.0.0.1:5500/raund/sobre/sobre.html">QUEM SOMOS</a></li>
+				<li><a href="#">INÍCIO</a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="sobre-campo">
+		<div>
+			<img src="https://eletrocheap.com.br/wp-content/themes/Divi/images/perfil.png" alt="img-login" id="login">
+		</div>
+		<img id="img_section" src="imagens/img_section.jpg">
+		<img src="imagens/imagem-desktop-1.jpg" id="img-deskstop">
+		<h1 id="sobre">Sobre Nós</h1>
+		<p id="text_sobre" class="paragrafo"> Há mais de 4 anos, Dubuy vem escrevendo capítulos importantes na história do skate nacional e internacional, contribuindo para a constante evolução da cena urbana e realizando eventos em diferentes regiões do país, a fim de garantir um calendário positivo de competições e consolidar de vez o Brasil no cenário mundial dos grandes eventos de skate.</p>
+		<button class="btn_saiba-mais"><a href="Client_Dubuy\pg\saiba.html">Saiba mais</a></button>
+	</section>
+	<div class="type" id="patrocinador">
+		<video id="img_type" muted autoplay loop src="imagens/2032937362.mp4"></video>
+		<h1 id="text_duvidas">Como se torna patrocinador?</h1>
+
+		<p id="text_type-1" class="text_type">1-Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nostrum voluptatum doloribus eaque neque quae porro pariatur corporis;</p> <br>
+		
+		<p id="text_type-2" class="text_type">2-Amet, tenetur eos. Blanditiis in maiores sit natus repellat, veritatis nulla laudantium earum! Expedita, voluptate similique.</p> <br>
+		
+		<p class="text_type" id="text_type-3">3-Sapiente harum earum reprehenderit eius necessitatibus laudantium earum! Expedita, voluptate.</p>
+		<button id="btn_type"><a id="link_ic" href="http://127.0.0.1:5500/Client_Dubuy/pg2/contact.html">Ser pratrocinador</a></button>
+	</div>
+	<main>
+		<div class="increve-campo">
+			<img id="img_main" src="imagens/img_main-dou.jpg">
+			<img id="img_main-one" src="imagens/img_main.jpg">
+			<span id="campo_span-inscrever">Como participar dos eventos?</span>
+			<p class="text-lc">1- Para que você possa estar participando dos proximos eventos de skate da sua cidade  ou, outras cidades.</p>
+			<p class="paragrafo" id="text-ic_text2">2-Para que você possa estar participando dos proximos eventos de skate da sua cidade  ou, outras cidades.</p>
+			<p class="paragrafo" id="text-ic_text3">3-Para que você possa estar participando dos proximos eventos de skate da sua cidade  ou, outras cidades.</p>
+			<p class="paragrafo" id="text_contact">Saiba mais como se inscrever-se!</p>
+			<button id="btn_ic"><a  href="http://127.0.0.1:5500/Client_Dubuy/pg/saiba.html">Contato</a></button>
+		</div>
+	</main>
+	<footer>
+		<h5>Rodapé não funcional</h5>
+	</footer>
+
+	<script>
+		window.onload = function() {
+			const text = document.querySelector('#sobre');
+			typeWriter(text);
+		};
+  
+		function typeWriter(element) {
+			const textArray = element.innerHTML.split('');
+			element.innerHTML = '';
+			textArray.forEach((letter, i) => {
+				setTimeout(() => element.innerHTML += letter, 70 * i);
+			});
+		}
+	</script>
+</body>
+</html>
