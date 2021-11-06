@@ -183,6 +183,19 @@
 		<a href="https://www.youtube.com/c/CasaHacker"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa2NMP-K6udHMWyKzYaLQkz-Q66U07xcvFLA&usqp=CAU" id="icon-youtube"></a>
 	</footer>
 
-	<script src="script/write.js"></script>
+	<script>
+		window.onload = function() {
+			const text = document.getElementById('span_construcao');
+			typeWriter(text);
+		};
+  
+		function typeWriter(element) {
+			const textArray = element.innerHTML.split('');
+			element.innerHTML = '';
+			textArray.forEach((letter, i) => {
+				setTimeout(() => element.innerHTML += letter, 80 * i);
+			});
+		}
+	</script>
 </body>
 </html>
